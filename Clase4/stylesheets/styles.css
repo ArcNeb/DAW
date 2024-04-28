@@ -5,8 +5,14 @@ li{
   padding-right: 5px;
 }
 
-h1{
-  text-align: center;
+h1, h2{
+  text-align: left;
+  padding: 5px 15px;
+  margin-bottom:20px;
+  position: relative;
+  left: 538px;
+  display: block;
+  width: 650px;
 }
 header>nav{
   background-color: #1b232c;
@@ -17,6 +23,10 @@ header>nav>ul>li>a{
   color: white;
 }
 
+img{
+  position: relative;
+  left: 600px;
+}
 a{
   color: #378757;
 }
