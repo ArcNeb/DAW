@@ -1,0 +1,17 @@
+li{
+  list-style: none;
+  display: inline;
+}
+
+header>nav{
+  background-color: #1b232c;
+}
+a{
+  color: #378757;
+}
+footer>nav>ul>li>a{
+  color: grey;
+}
+header>nav>ul>li{
+
+}
