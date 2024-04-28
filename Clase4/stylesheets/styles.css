@@ -1,17 +1,33 @@
 li{
   list-style: none;
   display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
+h1{
+  text-align: center;
+}
 header>nav{
   background-color: #1b232c;
+  color: white;
 }
+
+header>nav>ul>li>a{
+  color: white;
+}
+
 a{
   color: #378757;
 }
+
 footer>nav>ul>li>a{
   color: grey;
 }
-header>nav>ul>li{
 
+#menu-nav{
+  margin-top: 0px;
+  padding-left: 12px;
+  padding-top: 12px;
 }
+
