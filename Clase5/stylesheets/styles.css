@@ -137,6 +137,7 @@ footer>nav>p{
     background-color: #1b232c;
     color: white;
     height: 90px;
+    width: 100%;
   }
   #header-nav-mobile>img{
    position: absolute;
@@ -145,14 +146,18 @@ footer>nav>p{
    visibility: visible;
   }
   #imgIphone{
-    left: 25px;
+    left: 50px;
+    width: 240px;
+    height: 240px;
   }
   #imgNotif{
-    left: 25px;
+    left: 50px;
+    width: 240px;
+    height: 240px;
   }
   main{
     width: 100%;
-    height: 100vh;
+    height: 2990px;
     
   }
   h1{
@@ -160,25 +165,31 @@ footer>nav>p{
     width: 100%;
     overflow-wrap: break-word;
     white-space: normal;
+    padding-left: 5px;
+    padding-right: 0px;
   }
   h2{
     overflow-wrap: break-word;
     white-space: normal;
     left: 0px;
     width: 100%;
+    padding-left: 5px;
+    padding-right: 0px;
   }
   body>main>p{
     left: 0px;width: 100%;
     overflow-wrap: break-word;
     white-space: normal;
     width: 100%;
+    padding-left: 2px;
+    padding-right: 0px;
   }
   footer{
-    display: block;
+    display: inline-block;
     position: absolute;
     width: 100%;
-    height: 50px;
-    bottom: 10px;
+    height: 160px;
+    bottom: -2500px;
   }
   footer>nav{
     display: block;
@@ -186,7 +197,24 @@ footer>nav>p{
     bottom: 0px;
     width: 100%;
   }
+  footer>nav>p{
+    padding-left: 5px;
+  }
+  p{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   #other-topics{
+    padding-left: 0px;
+    width: 250px;
+  }
+  #other-topics>li{
+    width: 140px;
+    position: relative;
+    left: 15px;
+  }
+  #form-button{
+    left: 0px;
     width: 100%;
   }
 }
