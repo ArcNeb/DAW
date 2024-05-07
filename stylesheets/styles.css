@@ -1,0 +1,252 @@
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #378757
+}
+
+footer{
+  background-color: #eaecef;
+}
+
+h1, h2{
+  text-align: left;
+  padding: 5px 15px;
+  margin-bottom:20px;
+  position: relative;
+  left: 538px;
+  display: block;
+  width: 650px;
+}
+body>main>p{
+  text-align: left;
+  padding: 5px 15px;
+  margin-bottom:20px;
+  position: relative;
+  left: 538px;
+  display: block;
+  width: 650px;
+  font-size: 20px;
+}
+#header-nav{
+  background-color: #1b232c;
+  color: white;
+  padding-left: 240px;
+}
+
+header>nav>ul>li{
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+header>nav>ul>li>a{
+  color: white;
+}
+
+#other-topics{
+  width: 350px;
+  height: 110px;
+  column-count: 3;
+  column-gap: 30px;
+  padding-left: 252px;
+  margin-bottom: 0px;
+}
+
+#other-topics>li{
+ width: 140px;
+ padding-bottom: 6px;
+}
+
+#other-topics>li>a{
+ color: grey;
+}
+
+img{
+  position: relative;
+  left: 600px;
+}
+
+
+
+footer>nav>p{
+  margin-top: 0px;
+  padding-left: 252px;
+}
+
+#form-button{
+  margin-top: 0px;
+  position: relative;
+  left: 1200px;
+  margin-bottom: 10px;
+}
+
+#menu-nav{
+  margin-top: 0px;
+  padding-left: 12px;
+  padding-top: 12px;
+}
+#header-nav-mobile{
+   visibility: hidden;
+}
+
+@media screen and (max-width: 768px){
+  #imgIphone{
+    left: 200px;
+    width: 360px;
+    height: 360px;
+  }
+  #imgNotif{
+    left: 200px;
+    width: 360px;
+    height: 360px;
+  }
+  main{
+    width: 100%;
+  }
+  h1{
+    left: 0px;
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+  h2{
+    overflow-wrap: break-word;
+    white-space: normal;
+    left: 0px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+  body>main>p{
+    left: 0px;width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+  header{
+    height: 83.2px;
+  }
+  #form-button{
+    left: 0px;
+    width: 100%;
+  }
+  #header-nav{
+    padding-left: 35px;
+    height: 100px;
+  }
+  #header-nav>ul{
+   position: relative; 
+   width: 753px;
+   right: 20px;
+   /*column-count: 5;
+   column-gap: 20px;*/
+   overflow: auto;
+   white-space: nowrap;
+  }
+  #other-topics{
+    padding-left: 50px;
+    width: 550px;
+  }
+  footer>nav>p{
+    padding-left: 35px;
+  }
+}
+@media screen and (max-width: 640px){
+  #header-nav{
+    display: none;
+  }
+  #header-nav-mobile{
+    visibility: visible;
+    display: block;
+    background-color: #1b232c;
+    color: white;
+    height: 90px;
+    width: 100%;
+  }
+  #header-nav-mobile>img{
+   position: absolute;
+   top: 20px;
+   left: 15px;
+   visibility: visible;
+  }
+  #imgIphone{
+    left: 50px;
+    width: 240px;
+    height: 240px;
+  }
+  #imgNotif{
+    left: 50px;
+    width: 240px;
+    height: 240px;
+  }
+  main{
+    width: 100%;
+    height: 2990px;
+    
+  }
+  h1{
+    left: 0px;
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+  h2{
+    overflow-wrap: break-word;
+    white-space: normal;
+    left: 0px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+  body>main>p{
+    left: 0px;width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 0px;
+  }
+  footer{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    bottom: -2500px;
+  }
+  footer>nav{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  footer>nav>p{
+    padding-left: 5px;
+  }
+  p{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #other-topics{
+    padding-left: 0px;
+    width: 250px;
+  }
+  #other-topics>li{
+    width: 140px;
+    position: relative;
+    left: 15px;
+  }
+  #form-button{
+    left: 0px;
+    width: 100%;
+  }
+}
+
