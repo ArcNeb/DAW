@@ -36,11 +36,17 @@
     margin-top: 15px;
 }
 
-.PostSecondary{
+#PostSecondaryContainer{
     display: flex;
-    flex-direction: column;
+    overflow-x: auto;
+    white-space: nowarp;
+}
+
+.PostSecondary{
+    margin: 20px;    
     background-color: rgb(172, 164, 164);
-    margin: 20px;
+    flex-shrink: 0;
+    max-width: 250px;
 }
 .PostSecondary>aside>time,.PostSecondary>aside>p{
     display: inline-block;
