@@ -30,7 +30,7 @@
     padding: 0px 0px 0px 15px;
 }
 .Post>img{
-    width: 270px;
+    width: 350px;
     height: 270px;
     align-self: center;
     margin-top: 15px;
@@ -40,13 +40,14 @@
     display: flex;
     overflow-x: auto;
     white-space: nowarp;
+    gap: 15px;
 }
 
-.PostSecondary{
-    margin: 20px;    
+.PostSecondary{  
     background-color: rgb(172, 164, 164);
     flex-shrink: 0;
     max-width: 250px;
+    margin-bottom: 10px;
 }
 .PostSecondary>aside>time,.PostSecondary>aside>p{
     display: inline-block;
@@ -58,6 +59,13 @@
 }
 .PostSecondary>aside>p{
     margin-top: 5px;
+}
+
+#PsFirstItem{
+    margin-left: 15px;
+}
+#PsLastItem{
+    margin-right: 15px;
 }
 
 header{
