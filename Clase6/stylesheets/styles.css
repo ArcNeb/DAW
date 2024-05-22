@@ -108,6 +108,12 @@ a{
     text-decoration: none;
 }
 
+footer>p{
+    border: 10px solid rgb(172, 164, 164);
+    margin: 15px 0px 0px 0px;
+    background-color: rgb(172, 164, 164);
+}
+
 @media (min-width: 1024px){
     #DesktopNav{
         display: block;
