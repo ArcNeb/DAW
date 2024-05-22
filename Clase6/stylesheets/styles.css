@@ -149,7 +149,9 @@ footer>p{
         align-self: flex-start;
         margin-top: 15px;
     }
-
+    #PostSecondaryContainer{
+        justify-content: space-around;
+    }
     .PostSecondary{
         max-width: 25%;
     }
