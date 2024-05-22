@@ -1,0 +1,109 @@
+#DesktopNav{
+    display: none;
+    background-color: rgb(234, 150, 50);
+}
+#MobileNav{
+    background-color: rgb(234, 150, 50);
+}
+#MobileNav>img{
+    height: 54px;
+    width: 54px;
+    position: relative; 
+    left: 15px;
+    bottom: 10px;
+}
+
+.Post{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(172, 164, 164);
+    margin: 15px;
+}
+.Post>h2, .Post>h3{
+    padding: 0px 20px 0px 20px;
+}
+.Post>p,.Post>aside>p{
+    padding: 0px 0px 0px 15px;
+}
+.Post>aside>time,.Post>aside>p{
+    display: inline-block;
+    padding: 0px 0px 0px 15px;
+}
+.Post>img{
+    width: 270px;
+    height: 270px;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.PostSecondary{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(172, 164, 164);
+    margin: 20px;
+}
+.PostSecondary>aside>time,.PostSecondary>aside>p{
+    display: inline-block;
+    padding: 0px 0px 0px 15px;
+}
+.PostSecondary>h4{
+    margin-bottom: 5px;
+    padding: 0px 0px 0px 15px;
+}
+.PostSecondary>aside>p{
+    margin-top: 5px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(234, 150, 50);
+    justify-content: center;
+    
+}
+
+header>p{
+    position: relative;
+    top: 30px;
+    margin: 0;
+    font-size: 20px;
+}
+
+h1{
+    position: relative;
+    left: 15px;
+}
+
+main>h2{
+    position: relative;
+    left: 15px;
+}
+
+a{
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+}
+
+@media (min-width: 1024px){
+    #DesktopNav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 50px;
+        background-color: rgb(234, 150, 50);
+    }
+    #DesktopNav>a{
+        font-size: 20px;
+        padding: 0px 15px;
+    }
+    #MobileNav{
+        display: none;
+    }
+
+    header>p{
+        position: relative;
+        top: 10px;
+        margin: 0;
+        font-size: 20px;
+    }
+}
