@@ -34,5 +34,3 @@ var LargoCadena5 = cadena5.length
 var resultado = LargoCadena4 + LargoCadena5
 
 console.log(resultado)
-
-console.log("---------------------")

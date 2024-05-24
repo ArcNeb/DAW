@@ -1,3 +1,4 @@
+console.log("---------------------")
 console.log("Ejercicio 2")
 console.log("---------------------")
 /*a. Crear una variable de tipo string con al menos 10 caracteres y convertir todo el
