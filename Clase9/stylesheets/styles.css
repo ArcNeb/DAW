@@ -78,6 +78,33 @@
     margin-right: 15px;
 }
 
+#Formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: rgb(7, 7, 7)
+}
+#Formulario>#CamposForm{
+    margin-bottom: 15px;
+}
+.Campos{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+}
+
+.Campos>label{
+    font-size: 25px;
+}
+.Campos>input{
+    height: 36px;
+    font-size: 21px;
+}
+
+#BotonSuscripcion{
+    height: 60px;
+}
+
 header{
     display: flex;
     height: 83.2px;
@@ -112,6 +139,10 @@ footer>p{
     border: 10px solid rgb(172, 164, 164);
     margin: 15px 0px 0px 0px;
     background-color: rgb(172, 164, 164);
+}
+footer{
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 1024px){
@@ -154,6 +185,39 @@ footer>p{
     }
     .PostSecondary{
         max-width: 25%;
+    }
+    #Formulario{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        color: rgb(7, 7, 7)
+    }
+    #Formulario>#CamposForm{
+        margin-bottom: 15px;
+        column-count: 2;
+    }
+    .Campos{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 5px;
+        justify-content: space-evenly;
+    }
+    
+    .Campos>label{
+        font-size: 25px;
+        flex-grow: 1;
+        align-self: center;
+        width: 230px;
+    }
+    .Campos>input{
+        height: 36px;
+        font-size: 21px;
+        flex-grow: 6;
+    }
+    #BotonSuscripcion{
+        height: 60px;
+        width: 240px;
+        align-self: center;
     }
     header{
         box-sizing: border-box;
