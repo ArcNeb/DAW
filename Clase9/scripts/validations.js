@@ -167,7 +167,7 @@ document.getElementById("InputDNI").addEventListener("focus", function (event){
 
 document.getElementById("InputCiudad").addEventListener("blur", function(event){
     var ciudad = document.getElementById("InputCiudad").value;
-    if(!DNI){
+    if(!ciudad){
         document.getElementById("InputCiudad").value = "Por favor ingresa tu ciudad"
         document.getElementById("InputCiudad").style.backgroundColor="red"
         document.getElementById("InputCiudad").style.color="white"
