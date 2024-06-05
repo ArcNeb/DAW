@@ -165,6 +165,100 @@ document.getElementById("InputDNI").addEventListener("focus", function (event){
     telefono.style.color="black"
 })
 
+document.getElementById("InputCiudad").addEventListener("blur", function(event){
+    var ciudad = document.getElementById("InputCiudad").value;
+    if(!DNI){
+        document.getElementById("InputCiudad").value = "Por favor ingresa tu ciudad"
+        document.getElementById("InputCiudad").style.backgroundColor="red"
+        document.getElementById("InputCiudad").style.color="white"
+    } else if(!validarCiudad(ciudad)){
+        document.getElementById("InputCiudad").value = "Por favor ingresa una ciudad válida"
+        document.getElementById("InputCiudad").style.backgroundColor="red"
+        document.getElementById("InputCiudad").style.color="white"
+    }
+})
+
+document.getElementById("InputCiudad").addEventListener("focus", function (event){
+    var telefono = document.getElementById("InputCiudad")
+    telefono.value = ""
+    telefono.style.backgroundColor="white"
+    telefono.style.color="black"
+})
+
+document.getElementById("BotonSuscripcion").addEventListener("click", function(event){
+    var errores = []
+
+    var nombre = document.getElementById("InputNombre").value;
+    var email = document.getElementById("InputCorreo").value;
+    var contraseña = document.getElementById("InputContra").value;
+    var cod = document.getElementById("InputCodPos").value;
+    var edad = document.getElementById("InputEdad").value;
+    var telefono = document.getElementById("InputTele").value;
+    var dirección = document.getElementById("InputDireccion").value;
+    var DNI = document.getElementById("InputDNI").value;
+    var ciudad = document.getElementById("InputCiudad").value;
+
+    console.log(validarNombre(nombre))
+    if(validarNombre(nombre) === false || nombre === ""){
+        errores.push("Nombre")
+    }
+    console.log(validarEmail(email))
+    if(validarEmail(email) === false || email == ""){
+        errores.push("Correo")
+    }
+    console.log(validarContraseña(contraseña))
+    if(validarContraseña(contraseña) === false || contraseña === ""){
+        errores.push("Contraseña")
+    }
+    console.log(validarEdad(edad))
+    if(validarEdad(edad) === false || edad === ""){
+        errores.push("Edad")
+    }
+    console.log(validarTelefono(telefono))
+    if(validarTelefono(telefono) === false || telefono === ""){
+        errores.push("Teléfono")
+    }
+    console.log(validarDireccion(dirección))
+    if(validarDireccion(dirección) === false || dirección === ""){
+        errores.push("Dirección")
+    }
+    console.log(validarCiudad(ciudad))
+    if(validarCiudad(ciudad) === false || ciudad === ""){
+        errores.push("Ciudad")
+    }
+    console.log(validarCodPos(cod))
+    if(validarCodPos(cod) === false || cod === ""){
+        errores.push("Código Postal")
+    }
+    console.log(validarDNI(DNI))
+    if(validarDNI(DNI) === false || DNI === ""){
+        errores.push("DNI")
+    }
+
+    if(errores.length != 0){
+        var alerta = "Hubieron errores en los siguientes campos. "
+        errores.forEach(element => {
+            alerta = alerta.concat("\n" + element)
+        });
+        alert(alerta)
+        event.preventDefault()
+        return
+    }
+
+    document.getElementById("InputNombre").value = "";
+    document.getElementById("InputCorreo").value = "";
+    document.getElementById("InputContra").value = "";
+    document.getElementById("InputCodPos").value = "";
+    document.getElementById("InputEdad").value = "";
+    document.getElementById("InputTele").value = "";
+    document.getElementById("InputDireccion").value = "";
+    document.getElementById("InputDNI").value = "";
+    document.getElementById("InputCiudad").value = "";
+
+    alert("La suscripción fue un éxito")
+    event.preventDefault()
+})
+
 function validarContraseña(contraseña){
     var regexContra = /^(?=.{8,}).*$/;
     return regexContra.test(contraseña)
@@ -183,6 +277,11 @@ function validarEmail(email) {
 function validarCodPos(codPos) {
     var regexCodPos = /^.{3,}$/
     return regexCodPos.test(codPos)
+}
+
+function validarCiudad(ciudad) {
+    var regexCiudad = /^.{3,}$/
+    return regexCiudad.test(ciudad)
 }
 
 function validarEdad(edad){
