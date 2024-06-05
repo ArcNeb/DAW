@@ -145,6 +145,26 @@ document.getElementById("InputDireccion").addEventListener("focus", function (ev
     dirección.style.color="black"
 })
 
+document.getElementById("InputDNI").addEventListener("blur", function(event){
+    var DNI = document.getElementById("InputDNI").value;
+    if(!DNI){
+        document.getElementById("InputDNI").value = "Por favor ingresa tu DNI"
+        document.getElementById("InputDNI").style.backgroundColor="red"
+        document.getElementById("InputDNI").style.color="white"
+    } else if(!validarDNI(DNI)){
+        document.getElementById("InputDNI").value = "Por favor ingresa un DNI válido"
+        document.getElementById("InputDNI").style.backgroundColor="red"
+        document.getElementById("InputDNI").style.color="white"
+    }
+})
+
+document.getElementById("InputDNI").addEventListener("focus", function (event){
+    var telefono = document.getElementById("InputDNI")
+    telefono.value = ""
+    telefono.style.backgroundColor="white"
+    telefono.style.color="black"
+})
+
 function validarContraseña(contraseña){
     var regexContra = /^(?=.{8,}).*$/;
     return regexContra.test(contraseña)
@@ -176,8 +196,7 @@ function validarTelefono(tele){
 }
 
 function validarDireccion(dire){
-    var regexDirec = /^(?=.{6,})(.*\s)(\d{1,4}).*$/
-    ///^[A-Za-z\s]{5,}\s\d{1,4}$/
+    var regexDirec = /^(?=.*\s).{7,}(\d{1,4}).*$/
     return regexDirec.test(dire)
 }
 
