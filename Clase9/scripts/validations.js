@@ -219,7 +219,7 @@ document.getElementById("BotonSuscripcion").addEventListener("click", function(e
     if(validarCiudad(ciudad) === false || ciudad === "" || ciudad === "Por favor ingresa tus datos" || ciudad === "Por favor ingresa datos válidos"){
         errores.push("Ciudad")
     }
-    if(validarCodPos(cod) === false || cod === ""){
+    if(validarCodPos(cod) === false || cod === "" || cod === "Por favor ingresa tus datos" || cod === "Por favor ingresa datos válidos"){
         errores.push("Código Postal")
     }
     if(validarDNI(DNI) === false || DNI === ""){
