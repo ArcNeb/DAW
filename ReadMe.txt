@@ -10,6 +10,10 @@ Clase 5. Añadir a la página responsive design para celulares y tabletas utiliz
 
 Clase 6. Crear una nueva página con diseño nuevo con la modalidad mobile first utilizando flex-box y media queries.
 
+Clase 8. Ejercicios de JavaScript.
+
+Clase 9. Validaciones JavaScript y DOM.
+
 Link de la pagina: https://www.xataka.com/aplicaciones/apple-alerta-software-espia-mercenario-hay-150-paises-riesgo
 
 Link de la página de las noticias de la clase 6: https://www.engadget.com/gaming/
