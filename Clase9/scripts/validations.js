@@ -1,11 +1,11 @@
 document.getElementById("InputCorreo").addEventListener("blur", function(event) {
     var email = document.getElementById("InputCorreo").value;
     if (!email) {
-        document.getElementById("InputCorreo").value = "Por favor ingresa tu correo electrónico"
+        document.getElementById("InputCorreo").value = "Por favor ingresa tus datos"
         document.getElementById("InputCorreo").style.backgroundColor="red"
         document.getElementById("InputCorreo").style.color="white"
     } else if (!validarEmail(email)) {
-        document.getElementById("InputCorreo").value = "Por favor ingresa un correo electrónico válido"
+        document.getElementById("InputCorreo").value = "Por favor ingresa datos válidos"
         document.getElementById("InputCorreo").style.backgroundColor="red"
         document.getElementById("InputCorreo").style.color="white"
         document.getElementById("InputCorreo").style.fontSize="20px"
@@ -22,11 +22,11 @@ document.getElementById("InputCorreo").addEventListener("focus", function (event
 document.getElementById("InputNombre").addEventListener("blur", function (event) {
     var nombre = document.getElementById("InputNombre").value;
     if(!nombre){
-        document.getElementById("InputNombre").value = "Por favor ingresa tu nombre"
+        document.getElementById("InputNombre").value = "Por favor ingresa tus datos"
         document.getElementById("InputNombre").style.backgroundColor="red"
         document.getElementById("InputNombre").style.color="white"
     } else if(!validarNombre(nombre)){
-        document.getElementById("InputNombre").value = "Por favor ingresa un nombre válido"
+        document.getElementById("InputNombre").value = "Por favor ingresa datos válidos"
         document.getElementById("InputNombre").style.backgroundColor="red"
         document.getElementById("InputNombre").style.color="white"
     }
@@ -42,12 +42,12 @@ document.getElementById("InputNombre").addEventListener("focus", function (event
 document.getElementById("InputContra").addEventListener("blur", function (event) {
     var contraseña = document.getElementById("InputContra").value;
     if(!contraseña){
-        document.getElementById("InputContra").value = "Por favor ingresa tu contraseña"
+        document.getElementById("InputContra").value = "Por favor ingresa tus datos"
         document.getElementById("InputContra").style.backgroundColor="red"
         document.getElementById("InputContra").style.color="white"
         document.getElementById("InputContra").setAttribute("type", "text")
     } else if(!validarContraseña(contraseña)){
-        document.getElementById("InputContra").value = "Por favor ingresa una contraseña válida"
+        document.getElementById("InputContra").value = "Por favor ingresa datos válidos"
         document.getElementById("InputContra").style.backgroundColor="red"
         document.getElementById("InputContra").style.color="white"
         document.getElementById("InputContra").setAttribute("type", "text")
@@ -65,11 +65,11 @@ document.getElementById("InputContra").addEventListener("focus", function (event
 document.getElementById("InputCodPos").addEventListener("blur", function (event) {
     var cod = document.getElementById("InputCodPos").value;
     if(!cod){
-        document.getElementById("InputCodPos").value = "Por favor ingresa tu dirección postal"
+        document.getElementById("InputCodPos").value = "Por favor ingresa tus datos"
         document.getElementById("InputCodPos").style.backgroundColor="red"
         document.getElementById("InputCodPos").style.color="white"
     } else if(!validarCodPos(cod)){
-        document.getElementById("InputCodPos").value = "Por favor ingresa un código postal válido"
+        document.getElementById("InputCodPos").value = "Por favor ingresa datos válidos"
         document.getElementById("InputCodPos").style.backgroundColor="red"
         document.getElementById("InputCodPos").style.color="white"
     }
@@ -86,14 +86,14 @@ document.getElementById("InputEdad").addEventListener("blur", function (event) {
     var edad = document.getElementById("InputEdad").value;
     if(!edad){
         document.getElementById("InputEdad").setAttribute("type", "text")
-        document.getElementById("InputEdad").value = "Por favor ingresa tu edad"
+        document.getElementById("InputEdad").value = "Por favor ingresa tus datos"
         document.getElementById("InputEdad").style.backgroundColor="red"
         document.getElementById("InputEdad").style.color="white"
     } else if(!validarEdad(edad)){
         document.getElementById("InputEdad").style.backgroundColor="red"
         document.getElementById("InputEdad").style.color="white"
         document.getElementById("InputEdad").setAttribute("type", "text")
-        document.getElementById("InputEdad").value = "Por favor ingresa una edad válida"
+        document.getElementById("InputEdad").value = "Por favor ingresa datos válidos"
     }
 });
 
@@ -108,11 +108,11 @@ document.getElementById("InputEdad").addEventListener("focus", function (event){
 document.getElementById("InputTele").addEventListener("blur", function (event) {
     var telefono = document.getElementById("InputTele").value;
     if(!telefono){
-        document.getElementById("InputTele").value = "Por favor ingresa tu teléfono"
+        document.getElementById("InputTele").value = "Por favor ingresa tus datos"
         document.getElementById("InputTele").style.backgroundColor="red"
         document.getElementById("InputTele").style.color="white"
     } else if(!validarTelefono(telefono)){
-        document.getElementById("InputTele").value = "Por favor ingresa un teléfono válido"
+        document.getElementById("InputTele").value = "Por favor ingresa datos válidos"
         document.getElementById("InputTele").style.backgroundColor="red"
         document.getElementById("InputTele").style.color="white"
     }
@@ -128,11 +128,11 @@ document.getElementById("InputTele").addEventListener("focus", function (event){
 document.getElementById("InputDireccion").addEventListener("blur", function (event){
     var dirección = document.getElementById("InputDireccion").value;
     if(!dirección){
-        document.getElementById("InputDireccion").value = "Por favor ingresa tu dirección"
+        document.getElementById("InputDireccion").value = "Por favor ingresa tus datos"
         document.getElementById("InputDireccion").style.backgroundColor="red"
         document.getElementById("InputDireccion").style.color="white"
     }else if(!validarDireccion(dirección)){
-        document.getElementById("InputDireccion").value = "Por favor ingresa una dirección correcta"
+        document.getElementById("InputDireccion").value = "Por favor ingresa datos válidos"
         document.getElementById("InputDireccion").style.backgroundColor="red"
         document.getElementById("InputDireccion").style.color="white"
     }
@@ -148,11 +148,11 @@ document.getElementById("InputDireccion").addEventListener("focus", function (ev
 document.getElementById("InputDNI").addEventListener("blur", function(event){
     var DNI = document.getElementById("InputDNI").value;
     if(!DNI){
-        document.getElementById("InputDNI").value = "Por favor ingresa tu DNI"
+        document.getElementById("InputDNI").value = "Por favor ingresa tus datos"
         document.getElementById("InputDNI").style.backgroundColor="red"
         document.getElementById("InputDNI").style.color="white"
     } else if(!validarDNI(DNI)){
-        document.getElementById("InputDNI").value = "Por favor ingresa un DNI válido"
+        document.getElementById("InputDNI").value = "Por favor ingresa datos válidos"
         document.getElementById("InputDNI").style.backgroundColor="red"
         document.getElementById("InputDNI").style.color="white"
     }
@@ -168,21 +168,21 @@ document.getElementById("InputDNI").addEventListener("focus", function (event){
 document.getElementById("InputCiudad").addEventListener("blur", function(event){
     var ciudad = document.getElementById("InputCiudad").value;
     if(!ciudad){
-        document.getElementById("InputCiudad").value = "Por favor ingresa tu ciudad"
+        document.getElementById("InputCiudad").value = "Por favor ingresa tus datos"
         document.getElementById("InputCiudad").style.backgroundColor="red"
         document.getElementById("InputCiudad").style.color="white"
     } else if(!validarCiudad(ciudad)){
-        document.getElementById("InputCiudad").value = "Por favor ingresa una ciudad válida"
+        document.getElementById("InputCiudad").value = "Por favor ingresa datos válidos"
         document.getElementById("InputCiudad").style.backgroundColor="red"
         document.getElementById("InputCiudad").style.color="white"
     }
 })
 
 document.getElementById("InputCiudad").addEventListener("focus", function (event){
-    var telefono = document.getElementById("InputCiudad")
-    telefono.value = ""
-    telefono.style.backgroundColor="white"
-    telefono.style.color="black"
+    var ciudad = document.getElementById("InputCiudad")
+    ciudad.value = ""
+    ciudad.style.backgroundColor="white"
+    ciudad.style.color="black"
 })
 
 document.getElementById("BotonSuscripcion").addEventListener("click", function(event){
@@ -198,39 +198,30 @@ document.getElementById("BotonSuscripcion").addEventListener("click", function(e
     var DNI = document.getElementById("InputDNI").value;
     var ciudad = document.getElementById("InputCiudad").value;
 
-    console.log(validarNombre(nombre))
-    if(validarNombre(nombre) === false || nombre === ""){
+    if(validarNombre(nombre) === false || nombre === "" || nombre === "Por favor ingresa tus datos" || nombre === "Por favor ingresa datos válidos"){
         errores.push("Nombre")
     }
-    console.log(validarEmail(email))
     if(validarEmail(email) === false || email == ""){
         errores.push("Correo")
     }
-    console.log(validarContraseña(contraseña))
-    if(validarContraseña(contraseña) === false || contraseña === ""){
+    if(validarContraseña(contraseña) === false || contraseña === "" || contraseña === "Por favor ingresa tus datos" || contraseña === "Por favor ingresa datos válidos"){
         errores.push("Contraseña")
     }
-    console.log(validarEdad(edad))
     if(validarEdad(edad) === false || edad === ""){
         errores.push("Edad")
     }
-    console.log(validarTelefono(telefono))
     if(validarTelefono(telefono) === false || telefono === ""){
         errores.push("Teléfono")
     }
-    console.log(validarDireccion(dirección))
     if(validarDireccion(dirección) === false || dirección === ""){
         errores.push("Dirección")
     }
-    console.log(validarCiudad(ciudad))
-    if(validarCiudad(ciudad) === false || ciudad === ""){
+    if(validarCiudad(ciudad) === false || ciudad === "" || ciudad === "Por favor ingresa tus datos" || ciudad === "Por favor ingresa datos válidos"){
         errores.push("Ciudad")
     }
-    console.log(validarCodPos(cod))
     if(validarCodPos(cod) === false || cod === ""){
         errores.push("Código Postal")
     }
-    console.log(validarDNI(DNI))
     if(validarDNI(DNI) === false || DNI === ""){
         errores.push("DNI")
     }
@@ -240,8 +231,20 @@ document.getElementById("BotonSuscripcion").addEventListener("click", function(e
         errores.forEach(element => {
             alerta = alerta.concat("\n" + element)
         });
+        console.log(errores)
         alert(alerta)
         event.preventDefault()
+
+        document.getElementById("InputNombre").value = "";
+        document.getElementById("InputCorreo").value = "";
+        document.getElementById("InputContra").value = "";
+        document.getElementById("InputCodPos").value = "";
+        document.getElementById("InputEdad").value = "";
+        document.getElementById("InputTele").value = "";
+        document.getElementById("InputDireccion").value = "";
+        document.getElementById("InputDNI").value = "";
+        document.getElementById("InputCiudad").value = "";
+
         return
     }
 
