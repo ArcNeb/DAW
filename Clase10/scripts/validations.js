@@ -248,6 +248,8 @@ document.getElementById("BotonSuscripcion").addEventListener("click", function(e
         return
     }
 
+    enviar_datos()
+
     document.getElementById("InputNombre").value = "";
     document.getElementById("InputCorreo").value = "";
     document.getElementById("InputContra").value = "";
