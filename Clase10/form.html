@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Clase10/stylesheets/styles.css">
+        <link rel="stylesheet" href="../Clase10/stylesheets/normalize.css">
+        <title>Formulario Suscripción</title>
+    </head>
+    <body>
+        <header>
+            <p><b>El mensajero de mensajes</b></p>
+        </header>
+        <nav id="DesktopNav">
+            <ul>
+                <li><a href="../index.html">Nexo</a></li>
+                <li><a href="./index.html">Noticias gaming</a></li>
+                <li><a href="./form.html">Formulario</a></li>         
+            </ul>            
+        </nav>
+        <nav id="MobileNav">
+            <img src="imgs/menu.png" alt="Hola">
+        </nav>
+        <main>
+            <h1>Suscribase al Mensajero de Mensajes</h1>
+            <form id="Formulario">
+                <div id="CamposForm">
+                    <div class="Campos" id="CampoNombre">
+                        <label for="NombreCompleto">Nombre completo:</label>
+                        <input id="InputNombre" type="text">
+                    </div>
+                    <div class="Campos" id="CampoCorreo">
+                        <label for="Email">Correo electrónico:</label>
+                        <input id="InputCorreo" type="text">
+                    </div>
+                    <div class="Campos" id="CampoContra">
+                        <label for="Contraseña">Contraseña:</label>
+                        <input id="InputContra" type="password">
+                    </div>
+                    <div class="Campos" id="CampoEdad">
+                        <label for="Edad">Edad:</label>
+                        <input id="InputEdad" type="number">
+                    </div>
+                    <div class="Campos" id="CampoTele">
+                        <label for="Telefono">Teléfono:</label>
+                        <input id="InputTele" type="tel">
+                    </div>
+                    <div class="Campos" id="CampoDireccion">
+                        <label for="Direccion">Direccion:</label>
+                        <input id="InputDireccion" type="text">
+                    </div>
+                    <div class="Campos" id="CampoCiudad">
+                        <label for="Ciudad">Ciudad:</label>
+                        <input id="InputCiudad" type="text">
+                    </div>
+                    <div class="Campos" id="CampoCodPos">
+                        <label for="CodigoPostal">Código Postal:</label>
+                        <input id="InputCodPos" type="text"></label>
+                    </div>
+                    <div class="Campos" id="CampoDNI">
+                        <label for="DNI">DNI:</label>
+                        <input id="InputDNI" type="text">
+                    </div>
+                </div>
+                <button id="BotonSuscripcion" type="submit">Confirmar suscripción</button>
+            </form>
+            
+        </main>
+        <footer>
+            <p>Aca se encuentra el footer</p>
+        </footer>
+        <script src="./scripts/validations.js"></script>
+    </body>    
+</html>
