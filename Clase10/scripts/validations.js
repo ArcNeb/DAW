@@ -185,7 +185,7 @@ document.getElementById("InputCiudad").addEventListener("focus", function (event
     ciudad.style.color="black"
 })
 
-document.getElementById("BotonSuscripcion").addEventListener("click", function(event){
+document.getElementById("BotonSuscripcion").addEventListener("click", async function(event){
     var errores = []
 
     var nombre = document.getElementById("InputNombre").value;
@@ -231,7 +231,6 @@ document.getElementById("BotonSuscripcion").addEventListener("click", function(e
         errores.forEach(element => {
             alerta = alerta.concat("\n" + element)
         });
-        console.log(errores)
         alert(alerta)
         event.preventDefault()
 
@@ -248,7 +247,24 @@ document.getElementById("BotonSuscripcion").addEventListener("click", function(e
         return
     }
 
-    enviar_datos()
+    var conjunto = []
+
+    conjunto.push(nombre)
+    conjunto.push(email)
+    conjunto.push(contraseña)
+    conjunto.push(cod)
+    conjunto.push(edad)
+    conjunto.push(telefono)
+    conjunto.push(dirección)
+    conjunto.push(DNI)
+    conjunto.push(ciudad)
+    
+    try{
+        resultadoModal(conjunto)
+    }
+    catch(error){
+        console.log("Hubo un error en las validaciones: " + error)
+    }
 
     document.getElementById("InputNombre").value = "";
     document.getElementById("InputCorreo").value = "";
@@ -263,6 +279,11 @@ document.getElementById("BotonSuscripcion").addEventListener("click", function(e
     alert("La suscripción fue un éxito")
     event.preventDefault()
 })
+
+async function resultadoModal(datos){
+    var modal_resultado = await enviar_datos(datos)
+    console.log(modal_resultado.body)
+}
 
 function validarContraseña(contraseña){
     var regexContra = /^(?=.{8,}).*$/;
