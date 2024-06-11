@@ -1,17 +1,17 @@
-var A = []
+// var A = []
 
-A.push("Hola")
-A.push("Hola")
-A.push("Hola")
-A.push("Hola")
-A.push("Hola")
-A.push("Hola")
-A.push("Hola")
-A.push("Hola")
-A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
+// A.push("Hola")
 
 async function enviar_datos(datos) {
-  try{
+  try {
     var resultados = await fetch('https://jsonplaceholder.typicode.com/users', {
       method: 'POST',
       body: JSON.stringify({
@@ -33,37 +33,36 @@ async function enviar_datos(datos) {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-
     // console.log(resultados)
-    if(resultados.ok === true){
+    if (resultados.ok === true) {
       var informacion = await resultados.json()
-      
+      guardar_datos(datos)
       return informacion
     }
     return -1
   }
-  catch{
+  catch {
 
   }
-  
+
 }
 
-function guardar_datos(datos){
-    localStorage.setItem("NOMBRE", datos[0])
-    localStorage.setItem("CORREO", datos[1])
-    localStorage.setItem("CONTRASEÑA", datos[2])
-    localStorage.setItem("COD_POS", datos[3])
-    localStorage.setItem("EDAD", datos[4])
-    localStorage.setItem("TELEFONO", datos[5])
-    localStorage.setItem("DIRECCION", datos[8])
-    localStorage.setItem("DNI", datos[7])
-    localStorage.setItem("CIUDAD", datos[8])
-    console.log(localStorage)
+function guardar_datos(datos) {
+  localStorage.setItem("NOMBRE", datos[0])
+  localStorage.setItem("CORREO", datos[1])
+  localStorage.setItem("CONTRASEÑA", datos[2])
+  localStorage.setItem("COD_POS", datos[3])
+  localStorage.setItem("EDAD", datos[4])
+  localStorage.setItem("TELEFONO", datos[5])
+  localStorage.setItem("DIRECCION", datos[8])
+  localStorage.setItem("DNI", datos[7])
+  localStorage.setItem("CIUDAD", datos[8])
+  console.log(localStorage)
 }
 
-function remover_datos(datos){
-    localStorage.removeItem("NOMBRE", datos[0])
-    localStorage.removeItem("CORREO", datos[1])
+function remover_datos(datos) {
+  localStorage.removeItem("NOMBRE", datos[0])
+  localStorage.removeItem("CORREO", datos[1])
 }
 
 // enviar_datos(A)
