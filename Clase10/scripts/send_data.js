@@ -1,15 +1,3 @@
-// var A = []
-
-// A.push("Hola")
-// A.push("Hola")
-// A.push("Hola")
-// A.push("Hola")
-// A.push("Hola")
-// A.push("Hola")
-// A.push("Hola")
-// A.push("Hola")
-// A.push("Hola")
-
 async function enviar_datos(datos) {
   try {
     var resultados = await fetch('https://jsonplaceholder.typicode.com/users', {
@@ -59,10 +47,3 @@ function guardar_datos(datos) {
   localStorage.setItem("CIUDAD", datos[8])
   console.log(localStorage)
 }
-
-function remover_datos(datos) {
-  localStorage.removeItem("NOMBRE", datos[0])
-  localStorage.removeItem("CORREO", datos[1])
-}
-
-// enviar_datos(A)

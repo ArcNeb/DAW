@@ -231,8 +231,8 @@ document.getElementById("BotonSuscripcion").addEventListener("click", async func
         errores.forEach(element => {
             alerta = alerta.concat("\n" + element)
         });
-        alert(alerta)
-        event.preventDefault()
+        // alert(alerta)
+        // event.preventDefault()
 
         document.getElementById("InputNombre").value = "";
         document.getElementById("InputCorreo").value = "";
@@ -244,6 +244,11 @@ document.getElementById("BotonSuscripcion").addEventListener("click", async func
         document.getElementById("InputDNI").value = "";
         document.getElementById("InputCiudad").value = "";
 
+        document.getElementById("FormModalFailureText").innerHTML = alerta
+        document.getElementById("FormModalFailure").style.display = "block"
+
+        //debugger
+        localStorage.clear()
         return
     }
 
@@ -284,17 +289,21 @@ document.getElementById("BotonSuscripcion").addEventListener("click", async func
 //  Deberia seguir la funcionalidad del cuadro modal acá
 async function resultadoModal(datos) {
     var enviar_datos_res = await enviar_datos(datos)
-    debugger
+
     if (enviar_datos_res.title === "Datos") {
         document.getElementById("FormModalSuccessText").innerHTML = enviar_datos_res.body
         document.getElementById("FormModalSuccess").style.display = "block"
+        document.getElementById("FormModalFailureText").innerHTML = ""
+        document.getElementById("FormModalFailure").style.display = "none"
     } else {
         document.getElementById("FormModalFailureText").innerHTML = "No hubo exito en la recoleccion de los datos"
         document.getElementById("FormModalFailure").style.display = "block"
+        document.getElementById("FormModalSuccessText").innerHTML = ""
+        document.getElementById("FormModalSuccess").style.display = "none"
     }
 
-    debugger
-    console.log(enviar_datos_res.body)
+    // debugger
+    // console.log(enviar_datos_res.body)
 }
 
 function validarContraseña(contraseña) {
