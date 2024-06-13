@@ -1,0 +1,31 @@
+#FormModal {
+    display: none;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(134, 131, 129, .75);
+    z-index: 1;
+}
+
+#ModalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 30%;
+    left: 25%;
+    width: 500px;
+    background-color: rgb(195, 209, 3);
+}
+
+.ModalText {
+    padding: 0px 15px;
+    font-size: 25px;
+}
+
+#FormModalText {
+    margin-top: 0px;
+    font-size: 19px;
+    word-wrap: break-word;
+}
