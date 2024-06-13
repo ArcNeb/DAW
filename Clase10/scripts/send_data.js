@@ -42,7 +42,7 @@ function guardar_datos(datos) {
   localStorage.setItem("COD_POS", datos[3])
   localStorage.setItem("EDAD", datos[4])
   localStorage.setItem("TELEFONO", datos[5])
-  localStorage.setItem("DIRECCION", datos[8])
+  localStorage.setItem("DIRECCION", datos[6])
   localStorage.setItem("DNI", datos[7])
   localStorage.setItem("CIUDAD", datos[8])
   console.log(localStorage)

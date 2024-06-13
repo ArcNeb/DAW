@@ -1,12 +1,18 @@
-#DesktopNav{
+* {
+    z-index: auto;
+}
+
+#DesktopNav {
     display: none;
     background-color: rgb(234, 150, 50);
 }
-#MobileNav{
+
+#MobileNav {
     background-color: rgb(234, 150, 50);
     height: 10px;
 }
-#MobileNav>img{
+
+#MobileNav>img {
     height: 54px;
     width: 54px;
     position: relative;
@@ -14,98 +20,113 @@
     left: 10px;
 }
 
-#PostContainer{
+#PostContainer {
     display: flex;
     flex-direction: column;
 }
 
-.Post{
+.Post {
     display: flex;
     flex-direction: column;
     background-color: rgb(172, 164, 164);
     margin: 15px;
 }
-.Post>h2, .Post>h3{
+
+.Post>h2,
+.Post>h3 {
     padding: 0px 20px 0px 20px;
 }
-.Post>p,.Post>aside>p{
+
+.Post>p,
+.Post>aside>p {
     padding: 0px 15px 0px 15px;
     text-align: justify;
 }
-.Post>aside>time,.Post>aside>p{
+
+.Post>aside>time,
+.Post>aside>p {
     display: inline-block;
     padding: 0px 15px 0px 15px;
 }
-.Post>img{
+
+.Post>img {
     width: 100%;
     height: 270px;
     align-self: center;
     margin-top: 15px;
 }
 
-#PostSecondaryContainer{
+#PostSecondaryContainer {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
     gap: 15px;
 }
 
-.PostSecondary{  
+.PostSecondary {
     background-color: rgb(172, 164, 164);
     flex-shrink: 0;
     max-width: 250px;
     min-width: 200px;
     margin-bottom: 10px;
 }
-.PostSecondary>aside>time,.PostSecondary>aside>p{
+
+.PostSecondary>aside>time,
+.PostSecondary>aside>p {
     display: inline-block;
     padding: 0px 15px 0px 15px;
     text-align: justify;
 }
-.PostSecondary>h4{
+
+.PostSecondary>h4 {
     white-space: wrap;
     margin-bottom: 5px;
     padding: 0px 15px 0px 15px;
 }
-.PostSecondary>aside>p{
+
+.PostSecondary>aside>p {
     margin-top: 5px;
 }
 
-#PsFirstItem{
+#PsFirstItem {
     margin-left: 15px;
 }
-#PsLastItem{
+
+#PsLastItem {
     margin-right: 15px;
 }
 
-#Formulario{
+#Formulario {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     color: rgb(7, 7, 7)
 }
-#Formulario>#CamposForm{
+
+#Formulario>#CamposForm {
     margin-bottom: 15px;
 }
-.Campos{
+
+.Campos {
     display: flex;
     flex-direction: column;
     padding: 10px 5px;
 }
 
-.Campos>label{
+.Campos>label {
     font-size: 25px;
 }
-.Campos>input{
+
+.Campos>input {
     height: 36px;
     font-size: 21px;
 }
 
-#BotonSuscripcion{
+#BotonSuscripcion {
     height: 60px;
 }
 
-header{
+header {
     display: flex;
     height: 83.2px;
     flex-direction: row;
@@ -114,45 +135,47 @@ header{
     align-items: center;
 }
 
-header>p{
+header>p {
     margin: 0;
     font-size: 30px;
     padding-right: 10px;
 }
 
-h1{
+h1 {
     position: relative;
     left: 15px;
 }
 
-main>h2{
+main>h2 {
     position: relative;
     left: 15px;
 }
 
-a{
+a {
     color: rgb(7, 7, 7);
     text-decoration: none;
 }
 
-footer>p{
+footer>p {
     border: 10px solid rgb(172, 164, 164);
     margin: 15px 0px 0px 0px;
     background-color: rgb(172, 164, 164);
 }
-footer{
+
+footer {
     display: flex;
     flex-direction: column;
 }
 
-@media (min-width: 1024px){
-    #DesktopNav{
+@media (min-width: 1024px) {
+    #DesktopNav {
         display: block;
         background-color: rgb(234, 150, 50);
         height: 30px;
         font-size: 20px;
     }
-    #DesktopNav>ul{
+
+    #DesktopNav>ul {
         display: flex;
         margin: 0;
         height: inherit;
@@ -163,69 +186,81 @@ footer{
         list-style: none;
         background-color: inherit;
     }
-    #DesktopNav>ul>li>a{
+
+    #DesktopNav>ul>li>a {
         padding-right: 16px;
     }
-    #MobileNav{
+
+    #MobileNav {
         display: none;
     }
 
-    #PostContainer{
+    #PostContainer {
         flex-direction: row;
         justify-content: space-around;
     }
-    .Post>img{
+
+    .Post>img {
         width: 100%;
         height: 270px;
         align-self: flex-start;
         margin-top: 15px;
     }
-    #PostSecondaryContainer{
+
+    #PostSecondaryContainer {
         justify-content: space-around;
     }
-    .PostSecondary{
+
+    .PostSecondary {
         max-width: 25%;
     }
-    #Formulario{
+
+    #Formulario {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         color: rgb(7, 7, 7)
     }
-    #Formulario>#CamposForm{
+
+    #Formulario>#CamposForm {
         margin-bottom: 15px;
         column-count: 2;
     }
-    .Campos{
+
+    .Campos {
         display: flex;
         flex-direction: row;
         padding: 10px 5px;
         justify-content: space-evenly;
     }
-    
-    .Campos>label{
+
+    .Campos>label {
         font-size: 25px;
         flex-grow: 1;
         align-self: center;
         width: 230px;
     }
-    .Campos>input{
+
+    .Campos>input {
         height: 36px;
         font-size: 21px;
         flex-grow: 6;
     }
-    #BotonSuscripcion{
+
+    #BotonSuscripcion {
         height: 60px;
         width: 240px;
         align-self: center;
     }
-    header{
+
+    header {
         box-sizing: border-box;
         justify-content: flex-start;
         padding-left: 20px;
         padding-bottom: 16px;
     }
-    header>p{
+
+    header>p {
         position: relative;
         top: 10px;
         margin: 0;
@@ -234,8 +269,8 @@ footer{
     }
 }
 
-@media (max-width: 400px){
-    header>p{
+@media (max-width: 400px) {
+    header>p {
         font-size: 20px;
         padding-right: 30px;
     }

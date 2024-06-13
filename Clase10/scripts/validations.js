@@ -244,8 +244,8 @@ document.getElementById("BotonSuscripcion").addEventListener("click", async func
         document.getElementById("InputDNI").value = "";
         document.getElementById("InputCiudad").value = "";
 
-        document.getElementById("FormModalFailureText").innerHTML = alerta
-        document.getElementById("FormModalFailure").style.display = "block"
+        document.getElementById("FormModalText").innerHTML = alerta
+        document.getElementById("FormModal").style.display = "block"
 
         //debugger
         localStorage.clear()
@@ -291,15 +291,11 @@ async function resultadoModal(datos) {
     var enviar_datos_res = await enviar_datos(datos)
 
     if (enviar_datos_res.title === "Datos") {
-        document.getElementById("FormModalSuccessText").innerHTML = enviar_datos_res.body
-        document.getElementById("FormModalSuccess").style.display = "block"
-        document.getElementById("FormModalFailureText").innerHTML = ""
-        document.getElementById("FormModalFailure").style.display = "none"
+        document.getElementById("FormModalText").innerHTML = "Resulto en un éxito:" + enviar_datos_res.body
+        document.getElementById("FormModal").style.display = "block"
     } else {
-        document.getElementById("FormModalFailureText").innerHTML = "No hubo exito en la recoleccion de los datos"
-        document.getElementById("FormModalFailure").style.display = "block"
-        document.getElementById("FormModalSuccessText").innerHTML = ""
-        document.getElementById("FormModalSuccess").style.display = "none"
+        document.getElementById("FormModalText").innerHTML = "No hubo exito en la recoleccion de los datos"
+        document.getElementById("FormModal").style.display = "block"
     }
 
     // debugger

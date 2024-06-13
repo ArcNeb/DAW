@@ -9,6 +9,7 @@ function cargar_datos() {
         document.getElementById("InputCiudad").value = localStorage.getItem("CIUDAD")
         document.getElementById("InputCodPos").value = localStorage.getItem("COD_POS")
         document.getElementById("InputDNI").value = localStorage.getItem("DNI")
+        console.log(localStorage)
         return
     }
     console.log("No hay datos guardados")
