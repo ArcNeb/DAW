@@ -281,9 +281,6 @@ document.getElementById("BotonSuscripcion").addEventListener("click", async func
     document.getElementById("InputDireccion").value = "";
     document.getElementById("InputDNI").value = "";
     document.getElementById("InputCiudad").value = "";
-
-    alert("La suscripción fue un éxito")
-    event.preventDefault()
 })
 
 //  Deberia seguir la funcionalidad del cuadro modal acá

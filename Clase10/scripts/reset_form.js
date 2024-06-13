@@ -15,4 +15,9 @@ function cargar_datos() {
     console.log("No hay datos guardados")
 }
 
+document.getElementById("FormModalButton").addEventListener("click", function () {
+    var FormModal = document.getElementById("FormModal")
+    FormModal.style.display = "none"
+})
+
 cargar_datos()
