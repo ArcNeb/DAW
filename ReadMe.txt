@@ -16,6 +16,8 @@ Clase 9. Validaciones JavaScript y DOM.
 
 Clase 10. Dialogos modales. Funciones asincronicas.
 
+Clase 11. API REST.
+
 Link de la pagina: https://www.xataka.com/aplicaciones/apple-alerta-software-espia-mercenario-hay-150-paises-riesgo
 
 Link de la página de las noticias de la clase 6: https://www.engadget.com/gaming/
