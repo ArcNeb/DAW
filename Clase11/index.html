@@ -22,7 +22,64 @@
         <img src="imgs/menu.png" alt="Hola">
     </nav>
     <main>
-        <h1>Noticias gaming</h1>
+        <h1>Sección personajes</h1>
+        <button id="AllCharactersButton">Obtener todos los personajes</button>
+        <button id="FilterCharactersButton">Filtrado</button>
+        <form id="FilterForm">
+            <div id="FieldName">
+                <label for="InputName">Nombre</label>
+                <input type="text">
+            </div>
+            <div id="FieldStatus">
+                <p>Estado</p>
+                <div class="FieldRadioButton">
+                    <label>Muerto</label>
+                    <input name="status" id="InputStatusDead" type="radio">
+                </div>
+                <div class="FieldRadioButton">
+                    <label>Vivo</label>
+                    <input name="status" id="InputStatusAlive" type="radio">
+                </div>
+                <div class="FieldRadioButton">
+                    <label>Desconocido</label>
+                    <input name="status" id="InputStatusUnknown" type="radio">
+                </div>
+            </div>
+            <div id="FieldSpecies">
+                <p>Especie</p>
+                <div class="FieldRadioButton">
+                    <label>Humano</label>
+                    <input name="specie" id="InputSpeciesHuman" type="radio">
+                </div>
+                <div class="FieldRadioButton">
+                    <label>Alien</label>
+                    <input name="specie" id="InputSpeciesAlien" type="radio">
+                </div>
+            </div>
+            <div id="FielType">
+                <label for="InputType">Tipo</label>
+                <input type="text">
+            </div>
+            <div id="FieldGender">
+                <p>Genero</p>
+                <div class="FieldRadioButton">
+                    <label>Masculino</label>
+                    <input name="gender" id="MaleGender" type="radio">
+                </div>
+                <div class="FieldRadioButton">
+                    <label>Femenino</label>
+                    <input name="gender" type="radio" id="FemaleGender">
+                </div>
+                <div class="FieldRadioButton">
+                    <label>Desconocido</label>
+                    <input name="gender" type="radio" id="UnknownGender">
+                </div>
+                <div class="FieldRadioButton">
+                    <label>Sin genero</label>
+                    <input name="gender" type="radio" id="Genderless">
+                </div>
+            </div>
+        </form>
         <div id="PostContainer">
             <div class="Post">
                 <img src="imgs/ayeno.png" alt="Ayeno's latest handheldrs">
@@ -35,58 +92,12 @@
                     <p>Lawrance Bonk</p><time>10/05/24</time>
                 </aside>
             </div>
-            <div class="Post">
-                <img src="imgs/DragonMario.png" alt="Ayeno's latest handheldrs">
-                <h2><a href="https://www.engadget.com/paper-mario-the-thousand-year-door-review-a-switch-remake-mostly-befitting-a-masterpiece-130052569.html"
-                        target="_blank">Paper Mario The Thousand-Year Door review: A Switch remake (mostly) befitting a
-                        masterpiece</a></h2>
-                <h3>Yes, it’s still an absolute treasure.</h3>
-                <p>Ayaneo just announced a bunch of new products, including the portable gaming consoles Pocket DMG and
-                    Pocket Micro. The company also announced a new mini PC.</p>
-                <aside>
-                    <p>Devindra Hardawar</p><time>11/05/24</time>
-                </aside>
-            </div>
-            <div class="Post">
-                <img src="imgs/nintendo.png" alt="Ayeno's latest handheldrs">
-                <h2><a href="https://www.engadget.com/nintendo-snaps-up-a-studio-known-for-its-switch-ports-100003358.html"
-                        target="_blank">Nintendo snaps up a studio known for its Switch ports</a></h2>
-                <h3>Shiver Entertainment is currently owned by the Embracer Group.</h3>
-                <p>Nintendo is buying Florida-based studio Shiver Entertainment, mostly known for its Switch ports, from
-                    the Embracer Group.</p>
-                <aside>
-                    <p>Mariela Moon</p><time>12/05/24</time>
-                </aside>
-            </div>
-        </div>
-        <h2>Noticias secundarias</h2>
-        <div id="PostSecondaryContainer">
-            <div class="PostSecondary" id="PsFirstItem">
-                <h4><a href="https://www.engadget.com/best-free-games-163045609.html" target="_blank">The best free
-                        games in 2024 that you can start playing today</a></h4>
-                <aside>
-                    <p>Devindra Hardawar</p><time>12/05/24</time>
-                </aside>
-            </div>
-            <div class="PostSecondary">
-                <h4><a href="https://www.engadget.com/best-free-games-163045609.html" target="_blank">The best free
-                        games in 2024 that you can start playing today</a></h4>
-                <aside>
-                    <p>Devindra Hardawar</p><time>12/05/24</time>
-                </aside>
-            </div>
-            <div class="PostSecondary" id="PsLastItem">
-                <h4><a href="https://www.engadget.com/best-free-games-163045609.html" target="_blank">The best free
-                        games in 2024 that you can start playing today</a></h4>
-                <aside>
-                    <p>Devindra Hardawar</p><time>12/05/24</time>
-                </aside>
-            </div>
         </div>
     </main>
     <footer>
         <p>Aca se encuentra el footer</p>
     </footer>
+    <script src="scripts/characters.js"></script>
 </body>
 
 </html>

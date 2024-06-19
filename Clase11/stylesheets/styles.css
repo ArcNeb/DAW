@@ -4,11 +4,11 @@
 
 #DesktopNav {
     display: none;
-    background-color: rgb(234, 150, 50);
+    background-color: rgb(108, 234, 50);
 }
 
 #MobileNav {
-    background-color: rgb(234, 150, 50);
+    background-color: rgb(108, 234, 50);
     height: 10px;
 }
 
@@ -130,7 +130,7 @@ header {
     display: flex;
     height: 83.2px;
     flex-direction: row;
-    background-color: rgb(234, 150, 50);
+    background-color: rgb(108, 234, 50);
     justify-content: flex-end;
     align-items: center;
 }
@@ -170,7 +170,7 @@ footer {
 @media (min-width: 1024px) {
     #DesktopNav {
         display: block;
-        background-color: rgb(234, 150, 50);
+        background-color: rgb(108, 234, 50);
         height: 30px;
         font-size: 20px;
     }
