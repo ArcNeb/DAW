@@ -25,61 +25,68 @@
         <h1>Sección personajes</h1>
         <button id="AllCharactersButton">Obtener todos los personajes</button>
         <button id="FilterCharactersButton">Filtrado</button>
-        <form id="FilterForm">
-            <div id="FieldName">
-                <label for="InputName">Nombre</label>
-                <input type="text">
-            </div>
-            <div id="FieldStatus">
-                <p>Estado</p>
-                <div class="FieldRadioButton">
-                    <label>Muerto</label>
-                    <input name="status" id="InputStatusDead" type="radio">
+        <div id="BackgroundForm">
+            <form id="FilterForm">
+                <div id="FieldName" class="Field">
+                    <label for="InputName">Nombre</label>
+                    <input type="text">
                 </div>
-                <div class="FieldRadioButton">
-                    <label>Vivo</label>
-                    <input name="status" id="InputStatusAlive" type="radio">
+                <div id="FieldStatus" class="Field">
+                    <p>Estado</p>
+                    <div class="FieldRadioButton">
+                        <label>Muerto</label>
+                        <input name="status" id="InputStatusDead" type="radio">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Vivo</label>
+                        <input name="status" id="InputStatusAlive" type="radio">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Desconocido</label>
+                        <input name="status" id="InputStatusUnknown" type="radio">
+                    </div>
                 </div>
-                <div class="FieldRadioButton">
-                    <label>Desconocido</label>
-                    <input name="status" id="InputStatusUnknown" type="radio">
+                <div id="FieldSpecies" class="Field">
+                    <p>Especie</p>
+                    <div class="FieldRadioButton">
+                        <label>Humano</label>
+                        <input name="specie" id="InputSpeciesHuman" type="radio">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Alien</label>
+                        <input name="specie" id="InputSpeciesAlien" type="radio">
+                    </div>
                 </div>
-            </div>
-            <div id="FieldSpecies">
-                <p>Especie</p>
-                <div class="FieldRadioButton">
-                    <label>Humano</label>
-                    <input name="specie" id="InputSpeciesHuman" type="radio">
+                <div id="FielType" class="Field">
+                    <label for="InputType">Tipo</label>
+                    <input type="text">
                 </div>
-                <div class="FieldRadioButton">
-                    <label>Alien</label>
-                    <input name="specie" id="InputSpeciesAlien" type="radio">
+                <div id="FieldGender" class="Field">
+                    <p>Genero</p>
+                    <div class="FieldRadioButton">
+                        <label>Masculino</label>
+                        <input name="gender" id="MaleGender" type="radio">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Femenino</label>
+                        <input name="gender" type="radio" id="FemaleGender">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Desconocido</label>
+                        <input name="gender" type="radio" id="UnknownGender">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Sin genero</label>
+                        <input name="gender" type="radio" id="Genderless">
+                    </div>
                 </div>
-            </div>
-            <div id="FielType">
-                <label for="InputType">Tipo</label>
-                <input type="text">
-            </div>
-            <div id="FieldGender">
-                <p>Genero</p>
-                <div class="FieldRadioButton">
-                    <label>Masculino</label>
-                    <input name="gender" id="MaleGender" type="radio">
+                <div id="FormButtons">
+                    <button id="SearchWithFilter">Buscar</button>
+                    <button id="CloseFilter">Cerrar</button>
                 </div>
-                <div class="FieldRadioButton">
-                    <label>Femenino</label>
-                    <input name="gender" type="radio" id="FemaleGender">
-                </div>
-                <div class="FieldRadioButton">
-                    <label>Desconocido</label>
-                    <input name="gender" type="radio" id="UnknownGender">
-                </div>
-                <div class="FieldRadioButton">
-                    <label>Sin genero</label>
-                    <input name="gender" type="radio" id="Genderless">
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
+
         <div id="PostContainer">
             <div class="Post">
                 <img src="imgs/ayeno.png" alt="Ayeno's latest handheldrs">
