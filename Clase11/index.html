@@ -23,41 +23,41 @@
     </nav>
     <main>
         <h1>Sección personajes</h1>
-        <button id="AllCharactersButton">Obtener todos los personajes</button>
-        <button id="FilterCharactersButton">Filtrado</button>
+        <button id="AllCharactersButton" type="button">Obtener todos los personajes</button>
+        <button id="FilterCharactersButton" type="button">Filtrado</button>
         <div id="BackgroundForm">
             <form id="FilterForm">
                 <div id="FieldName" class="Field">
-                    <label for="InputName">Nombre</label>
+                    <label>Nombre</label>
                     <input type="text">
                 </div>
                 <div id="FieldStatus" class="Field">
                     <p>Estado</p>
                     <div class="FieldRadioButton">
                         <label>Muerto</label>
-                        <input name="status" id="InputStatusDead" type="radio">
+                        <input name="status" id="InputStatusDead" type="radio" value="dead">
                     </div>
                     <div class="FieldRadioButton">
                         <label>Vivo</label>
-                        <input name="status" id="InputStatusAlive" type="radio">
+                        <input name="status" id="InputStatusAlive" type="radio" value="alive">
                     </div>
                     <div class="FieldRadioButton">
                         <label>Desconocido</label>
-                        <input name="status" id="InputStatusUnknown" type="radio">
+                        <input name="status" id="InputStatusUnknown" type="radio" value="unknown">
                     </div>
                 </div>
                 <div id="FieldSpecies" class="Field">
                     <p>Especie</p>
                     <div class="FieldRadioButton">
                         <label>Humano</label>
-                        <input name="specie" id="InputSpeciesHuman" type="radio">
+                        <input name="specie" id="InputSpeciesHuman" type="radio" value="human">
                     </div>
                     <div class="FieldRadioButton">
                         <label>Alien</label>
-                        <input name="specie" id="InputSpeciesAlien" type="radio">
+                        <input name="specie" id="InputSpeciesAlien" type="radio" value="alien">
                     </div>
                 </div>
-                <div id="FielType" class="Field">
+                <div id="FieldType" class="Field">
                     <label for="InputType">Tipo</label>
                     <input type="text">
                 </div>
@@ -65,15 +65,15 @@
                     <p>Genero</p>
                     <div class="FieldRadioButton">
                         <label>Masculino</label>
-                        <input name="gender" id="MaleGender" type="radio">
+                        <input name="gender" id="MaleGender" type="radio" value="male">
                     </div>
                     <div class="FieldRadioButton">
                         <label>Femenino</label>
-                        <input name="gender" type="radio" id="FemaleGender">
+                        <input name="gender" type="radio" id="FemaleGender" value="female">
                     </div>
                     <div class="FieldRadioButton">
                         <label>Desconocido</label>
-                        <input name="gender" type="radio" id="UnknownGender">
+                        <input name="gender" type="radio" id="UnknownGender" value="unknown">
                     </div>
                     <div class="FieldRadioButton">
                         <label>Sin genero</label>
@@ -81,8 +81,8 @@
                     </div>
                 </div>
                 <div id="FormButtons">
-                    <button id="SearchWithFilter">Buscar</button>
-                    <button id="CloseFilter">Cerrar</button>
+                    <button id="SearchWithFilter" type="button">Buscar</button>
+                    <button id="CloseFilter" type="button">Cerrar</button>
                 </div>
             </form>
         </div>
