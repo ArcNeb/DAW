@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Clase11/stylesheets/styles.css">
+    <link rel="stylesheet" href="../Clase11/stylesheets/normalize.css">
+    <title>Rick and Morty API</title>
+</head>
+
+<body>
+    <header>
+        <p><b>Rick and Morty API</b></p>
+    </header>
+    <nav id="DesktopNav">
+        <ul>
+            <li><a href="../index.html">Nexo</a></li>
+        </ul>
+    </nav>
+    <nav id="MobileNav">
+        <img src="imgs/menu.png" alt="Hola">
+    </nav>
+    <main>
+        <h1>Sección personajes</h1>
+        <button id="AllCharactersButton" type="button">Obtener todos los personajes</button>
+        <button id="FilterCharactersButton" type="button">Filtrado</button>
+        <div id="BackgroundForm">
+            <form id="FilterForm">
+                <div id="FieldName" class="Field">
+                    <label>Nombre</label>
+                    <input type="text">
+                </div>
+                <div id="FieldStatus" class="Field">
+                    <p>Estado</p>
+                    <div class="FieldRadioButton">
+                        <label>Muerto</label>
+                        <input name="status" id="InputStatusDead" type="radio" value="dead">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Vivo</label>
+                        <input name="status" id="InputStatusAlive" type="radio" value="alive">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Desconocido</label>
+                        <input name="status" id="InputStatusUnknown" type="radio" value="unknown">
+                    </div>
+                </div>
+                <div id="FieldSpecies" class="Field">
+                    <p>Especie</p>
+                    <div class="FieldRadioButton">
+                        <label>Humano</label>
+                        <input name="specie" id="InputSpeciesHuman" type="radio" value="human">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Alien</label>
+                        <input name="specie" id="InputSpeciesAlien" type="radio" value="alien">
+                    </div>
+                </div>
+                <div id="FieldType" class="Field">
+                    <label for="InputType">Tipo</label>
+                    <input type="text">
+                </div>
+                <div id="FieldGender" class="Field">
+                    <p>Genero</p>
+                    <div class="FieldRadioButton">
+                        <label>Masculino</label>
+                        <input name="gender" id="MaleGender" type="radio" value="male">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Femenino</label>
+                        <input name="gender" type="radio" id="FemaleGender" value="female">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Desconocido</label>
+                        <input name="gender" type="radio" id="UnknownGender" value="unknown">
+                    </div>
+                    <div class="FieldRadioButton">
+                        <label>Sin genero</label>
+                        <input name="gender" type="radio" id="Genderless">
+                    </div>
+                </div>
+                <div id="FormButtons">
+                    <button id="SearchWithFilter" type="button">Buscar</button>
+                    <button id="CloseFilter" type="button">Cerrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="CharacterContainer">
+            <!-- <div class="Character">
+                <img src="imgs/ayeno.png" alt="Ayeno's latest handheldrs">
+                <h2><a href="https://www.engadget.com/ayaneos-latest-handhelds-are-inspired-by-the-game-boy-and-gb-micro-163412607.html"
+                        target="_blank">Ayaneo's latest handhelds are inspired by the Game Boy and GB Micro</a></h2>
+                <h3>The company also teased a forthcoming mini PC and a mobile dock.</h3>
+                <p>Ayaneo just announced a bunch of new products, including the portable gaming consoles Pocket DMG and
+                    Pocket Micro. The company also announced a new mini PC.</p>
+                <aside>
+                    <p>Lawrance Bonk</p><time>10/05/24</time>
+                </aside>
+            </div> -->
+        </div>
+    </main>
+    <footer>
+        <p>Aca se encuentra el footer</p>
+    </footer>
+    <script src="./scripts/characters.js"></script>
+    <script src="./scripts/filterForm.js"></script>
+</body>
+
+</html>
