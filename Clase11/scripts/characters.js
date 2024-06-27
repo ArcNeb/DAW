@@ -1,6 +1,7 @@
 
 var LINK = "https://rickandmortyapi.com/api/character"
 
+
 async function obtenerPersonajesTodos() {
     var res = await fetch(LINK)
 
@@ -61,6 +62,21 @@ async function obtenerPersonajesFiltro(nombre, estado, especie, tipo, genero) {
                 return -1
             }
         }
+        console.log(resConvertida.info.next)
+        if (resConvertida.info.next === null) {
+            sessionStorage.setItem("PagSig", null)
+            document.getElementById("NextPage").style.visibility = "hidden"
+        } else {
+            sessionStorage.setItem("PagSig", resConvertida.info.next)
+            paginacion.style.display = "flex"
+        }
+        if (resConvertida.info.prev === null) {
+            sessionStorage.setItem("PagPrev", null)
+            document.getElementById("PrevPage").style.visibility = "hidden"
+            paginacion.style.display = "flex"
+        }
+
+
 
     } catch (error) {
         console.log(error)
@@ -87,7 +103,6 @@ function colocarPersonajesFiltrados(arreglo) {
     var personajesExistentes = document.getElementsByClassName("Character")
     var personajesContenedor = document.getElementById("CharacterContainer")
 
-    console.log(arreglo)
     if (arreglo === undefined) {
         var contenerdor = document.createElement("div")
         contenerdor.id = "NoCharacterFound"
@@ -96,11 +111,25 @@ function colocarPersonajesFiltrados(arreglo) {
 
         contenerdor.insertAdjacentElement("afterbegin", resultadoVacio)
         personajesContenedor.insertAdjacentElement("afterbegin", contenerdor)
+
+        paginacion.style.display = "none"
         return
     }
 
     if (document.getElementById("NoCharacterFound")) {
         document.getElementById("NoCharacterFound").remove()
+    }
+
+    if (personajesExistentes.length > 0) {
+        // console.log("Habian Personajes")
+        personajesContenedor.innerHTML = ""
+    } else {
+        var resultadoVacio = document.getElementById("NoCharacterFound")
+        if (resultadoVacio) {
+            resultadoVacio.remove()
+        }
+
+        // console.log("No habian Personajes existentes")
     }
 
     arreglo.forEach(element => {
@@ -113,7 +142,7 @@ function colocarPersonajesFiltrados(arreglo) {
         var CharacterGender = document.createElement("p")
 
         Character.className = "Character"
-        Character.id = `${element.name}--Tag`
+        Character.id = `${element.name}--${element.type}--Tag`
 
         CharacterName.innerHTML = `${element.name}`
 
@@ -128,18 +157,18 @@ function colocarPersonajesFiltrados(arreglo) {
 
         CharacterGender.innerHTML = `${element.gender}`
 
-        if (document.getElementById(`${element.name}--Tag`)) {
-            document.getElementById(`${element.name}--Tag`).remove()
+        if (document.getElementById(`${element.name}--${element.type}--Tag`)) {
+            document.getElementById(`${element.name}--${element.type}--Tag`).remove()
         }
 
         personajesContenedor.insertAdjacentElement("beforeend", Character)
 
-        document.getElementById(`${element.name}--Tag`).insertAdjacentElement("afterbegin", CharacterType)
-        document.getElementById(`${element.name}--Tag`).insertAdjacentElement("afterbegin", CharacterGender)
-        document.getElementById(`${element.name}--Tag`).insertAdjacentElement("afterbegin", CharacterSpecies)
-        document.getElementById(`${element.name}--Tag`).insertAdjacentElement("afterbegin", CharacterStatus)
-        document.getElementById(`${element.name}--Tag`).insertAdjacentElement("afterbegin", CharacterName)
-        document.getElementById(`${element.name}--Tag`).insertAdjacentElement("afterbegin", CharacterIMG)
+        document.getElementById(`${element.name}--${element.type}--Tag`).insertAdjacentElement("afterbegin", CharacterType)
+        document.getElementById(`${element.name}--${element.type}--Tag`).insertAdjacentElement("afterbegin", CharacterGender)
+        document.getElementById(`${element.name}--${element.type}--Tag`).insertAdjacentElement("afterbegin", CharacterSpecies)
+        document.getElementById(`${element.name}--${element.type}--Tag`).insertAdjacentElement("afterbegin", CharacterStatus)
+        document.getElementById(`${element.name}--${element.type}--Tag`).insertAdjacentElement("afterbegin", CharacterName)
+        document.getElementById(`${element.name}--${element.type}--Tag`).insertAdjacentElement("afterbegin", CharacterIMG)
     })
 }
 
@@ -147,18 +176,18 @@ function colocarPersonajes(arreglo) {
     var personajesExistentes = document.getElementsByClassName("Character")
     var personajesContenedor = document.getElementById("CharacterContainer")
 
-    if (personajesExistentes.length > 0) {
-        // console.log("Habian Personajes")
+    // if (personajesExistentes.length > 0) {
+    //     // console.log("Habian Personajes")
 
-        return
-    } else {
-        var resultadoVacio = document.getElementById("NoCharacterFound")
-        if (resultadoVacio) {
-            resultadoVacio.remove()
-        }
+    //     return
+    // } else {
+    //     var resultadoVacio = document.getElementById("NoCharacterFound")
+    //     if (resultadoVacio) {
+    //         resultadoVacio.remove()
+    //     }
 
-        // console.log("No habian Personajes existentes")
-    }
+    //     // console.log("No habian Personajes existentes")
+    // }
 
     arreglo.forEach(element => {
         var Character = document.createElement("div")
