@@ -58,6 +58,25 @@
     margin-top: 15px;
 }
 
+#Pagination {
+    display: none;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px; */
+}
+
+#Pagination>button {
+    height: 120px;
+    width: 240px;
+    font-size: 40px;
+}
+
+#Pagination>span {
+    font-size: 30px;
+}
+
 #PostSecondaryContainer {
     display: flex;
     overflow-x: auto;
